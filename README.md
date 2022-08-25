@@ -13,27 +13,27 @@ En éste lab crearás 2 objetos: juego y bird. Estos objetos tendrán los siguie
 
 
 ### Métodos:
-- `aleatorio()` 
-**¿Qué hace?**: Devuelve un numero aleatorio entre un minimo y máximo dado
-**¿Dónde se utiliza?**: `bird.bottom` llamará a `juego.aleatorio()` para calcular un numero aleatorio entre 10 y 570
+1. `aleatorio()` 
+- **¿Qué hace?**: Devuelve un numero aleatorio entre un minimo y máximo dado
+- **¿Dónde se utiliza?**: `bird.bottom` llamará a `juego.aleatorio()` para calcular un numero aleatorio entre 10 y 570
 
 
-- `verificaColision()`
-**¿Qué hace?**: Llama a `bird.colision()` para revisar si `bird` tuvo una colision. Si `bird.colision()` devuelve el valor `true`, llama a `juego.terminar()` para terminar el juego.
+2. `verificaColision()`
+- **¿Qué hace?**: Llama a `bird.colision()` para revisar si `bird` tuvo una colision. Si `bird.colision()` devuelve el valor `true`, llama a `juego.terminar()` para terminar el juego.
 
 
 
-- `loop()`: 
-**¿Qué hace?** :Llama a `bird.efectoGravedad()`, `bird.dibujar()` y `juego.verificaColision()`
+3. `loop()`
+- **¿Qué hace?** :Llama a `bird.efectoGravedad()`, `bird.dibujar()` y `juego.verificaColision()`
 
-- `iniciar()`
+4. `iniciar()`
 **¿Qué hace?** :inicia el juego. Agrega un event
 
-- `terminar()`: term
+5. `terminar()`: term
 
-- `mostrarGameover()`: 
+6.  `mostrarGameover()`: 
 
-- `pararEfectos()`:
+7. `pararEfectos()`:
 
 #### El objeto bird:
 
