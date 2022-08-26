@@ -7,15 +7,15 @@ En éste lab crearás 2 objetos: juego y bird. Estos objetos tendrán los métod
 ## El objeto juego
 
 ### Propiedades:
-- timerId
+1. `timerId`
 - **¿Qué hace?**: 
 - **¿Dónde se utiliza?**: 
 
-- gravedad
+2. `gravedad`
 - **¿Qué hace?**: 
 - **¿Dónde se utiliza?**: 
 
-- skyHeight
+3. `skyHeight`
 - **¿Qué hace?**: 
 - **¿Dónde se utiliza?**: 
 
@@ -57,23 +57,23 @@ En éste lab crearás 2 objetos: juego y bird. Estos objetos tendrán los métod
 ## El objeto bird:
 
 ### Propiedades
-- div
+1. `div`
 - **¿Qué hace?**: 
 - **¿Dónde se utiliza?**: 
 
-- bottom
+2. `bottom`
 - **¿Qué hace?**: 
 - **¿Dónde se utiliza?**: 
 
-- left
+3. `left`
 - **¿Qué hace?**: 
 - **¿Dónde se utiliza?**: 
 
-- width
+4. `width`
 - **¿Qué hace?**: 
 - **¿Dónde se utiliza?**: 
 
-- height
+5. `height`
 - **¿Qué hace?**: 
 - **¿Dónde se utiliza?**: 
 
