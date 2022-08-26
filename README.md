@@ -2,14 +2,22 @@
 
 
 ## Introducción
-En éste lab crearás 2 objetos: juego y bird. Estos objetos tendrán los siguientes métodos y propiedades.
+En éste lab crearás 2 objetos: juego y bird. Estos objetos tendrán los métodos y propiedades que se describen a continuación.
 
 ## El objeto juego
 
 ### Propiedades:
 - timerId
+- **¿Qué hace?**: 
+- **¿Dónde se utiliza?**: 
+
 - gravedad
+- **¿Qué hace?**: 
+- **¿Dónde se utiliza?**: 
+
 - skyHeight
+- **¿Qué hace?**: 
+- **¿Dónde se utiliza?**: 
 
 
 ### Métodos:
@@ -46,18 +54,44 @@ En éste lab crearás 2 objetos: juego y bird. Estos objetos tendrán los siguie
 - **¿Dónde se utiliza?**: `juego.terminar()` llama a `juego.pararEfectos()` para que bird deje de aleatear y el suelo deje de moverse. 
 
 
-#### El objeto bird:
+## El objeto bird:
 
-Propiedades:
+### Propiedades
 - div
-- bottom
-- left
-- width
-- height
+- **¿Qué hace?**: 
+- **¿Dónde se utiliza?**: 
 
-Métodos:
-- efectoGravedad
-- dibujar
-- mover
-- colisión
+- bottom
+- **¿Qué hace?**: 
+- **¿Dónde se utiliza?**: 
+
+- left
+- **¿Qué hace?**: 
+- **¿Dónde se utiliza?**: 
+
+- width
+- **¿Qué hace?**: 
+- **¿Dónde se utiliza?**: 
+
+- height
+- **¿Qué hace?**: 
+- **¿Dónde se utiliza?**: 
+
+### Métodos:
+
+1. `efectoGravedad()`
+- **¿Qué hace?**: 
+- **¿Dónde se utiliza?**: 
+
+2. `dibujar()`
+- **¿Qué hace?**: 
+- **¿Dónde se utiliza?**: 
+
+3. `mover()`
+- **¿Qué hace?**: 
+- **¿Dónde se utiliza?**: 
+
+4. `colision()`
+- **¿Qué hace?**: 
+- **¿Dónde se utiliza?**: 
 
