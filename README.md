@@ -14,8 +14,9 @@ En éste lab crearás 2 objetos: juego y bird. Estos objetos tendrán los siguie
 
 ### Métodos:
 1. `aleatorio()` 
-- **¿Qué hace?**: Devuelve un numero aleatorio entre un minimo y máximo dado
-- **¿Dónde se utiliza?**: `bird.bottom` llamará a `juego.aleatorio()` para calcular un numero aleatorio entre 10 y 570
+**¿Qué hace?**: Devuelve un numero aleatorio entre un minimo y máximo dado
+<br />
+**¿Dónde se utiliza?**: `bird.bottom` llamará a `juego.aleatorio()` para calcular un numero aleatorio entre 10 y 570
 
 
 2. `verificaColision()`
