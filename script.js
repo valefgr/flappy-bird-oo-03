@@ -67,7 +67,7 @@ const bird = {
 
     colision: function () {
         if (bird.bottom < 0) {
-          juego.terminar();
+          return true;
         }
       },
   
