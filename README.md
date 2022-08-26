@@ -2,10 +2,10 @@
 
 ## Introducción
 
-En los labs anteriores agregaste el HTML y CSS del juego flappy bird. En éste lab comenzarás agregar la lógica y funcionalidad del juego. 
+En los labs anteriores agregaste el HTML y CSS del juego flappy bird. En éste lab comenzarás a agregar la lógica y funcionalidad del juego. 
 
 ## Instrucciones
-En éste lab crearás 2 objetos: juego y bird. Estos objetos deben tener los métodos y propiedades que se describen a continuación.
+Crea 2 objetos: juego y bird. Estos objetos deben tener los métodos y propiedades que se describen a continuación.
 
 ## El objeto juego
 
