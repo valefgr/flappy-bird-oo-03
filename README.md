@@ -1,23 +1,19 @@
 # Flappy Bird Parte 2
 
-
 ## Introducción
-En éste lab crearás 2 objetos: juego y bird. Estos objetos tendrán los métodos y propiedades que se describen a continuación.
+
+En éste lab crearás 2 objetos: juego y bird. Estos objetos deben tener los métodos y propiedades que se describen a continuación.
 
 ## El objeto juego
 
 ### Propiedades:
 1. `timerId`
-- **¿Qué hace?**: 
-- **¿Dónde se utiliza?**: 
+- **¿Qué valor tiene?**: `juego.timerId` tiene un valor del numero `0` (para iniciar)
+- **¿Dónde se utiliza?**: `juego.timerId` se utilizará para guardar un timer que llame cada 20 milisegundos a `juego.loop`
 
 2. `gravedad`
-- **¿Qué hace?**: 
-- **¿Dónde se utiliza?**: 
-
-3. `skyHeight`
-- **¿Qué hace?**: 
-- **¿Dónde se utiliza?**: 
+- **¿Qué valor tiene?**: `juego.gravedad` tiene un valor del numero `2`
+- **¿Dónde se utiliza?**: La variable `gravedad` representa el numero de pixeles que se restarán a `bird.bottom` cuando se aplique el efectoGravedad 
 
 
 ### Métodos:
@@ -33,12 +29,12 @@ En éste lab crearás 2 objetos: juego y bird. Estos objetos tendrán los métod
 
 3. `loop()`
 - **¿Qué hace?** :Llama a `bird.efectoGravedad()`, `bird.dibujar()` y `juego.verificaColision()`
-- **¿Dónde se utiliza?**: `juego.iniciar()` inicia un `setInterval()` que llama a `juego.loop()` cada 20 milisegundos. De ésta manera cada 20 milisegundos se aplicará el efecto de gravedad a bird, se dibujará bird en su nueva posicion, y se verificará si hubo una colisión.
+- **¿Dónde se utiliza?**: `juego.iniciar()` inicia un `setInterval()` que llama a `juego.loop()` cada 20 milisegundos. De ésta manera cada 20 milisegundos se aplicará el efecto de gravedad a bird, se dibujará bird en su nueva posicion, y se verificará si hubo una colisión
 
 
 4. `iniciar()`
-- **¿Qué hace?** : Agrega un eventListener de tal forma que cada que se pulse una tecla, se llamará al bird.move. También asigna a `juego.timerId` un `setInterval()` que llama a `juego.loop()` cada 20 milisegundos. 
-- **¿Dónde se utiliza?**: `juego.iniciar()` se llama para iniciar el juego. A través del setInterval() cada 20 milisegundos se aplicará el efecto de gravedad a bird, se dibujará bird en su nueva posicion, y se verificará si hubo una colisión. A través del eventListener, se puede mover bird.
+- **¿Qué hace?** : Agrega un eventListener de tal forma que cada que se pulse una tecla, se llame a `bird.move`. También asigna a `juego.timerId` un `setInterval()` que llame a `juego.loop()` cada 20 milisegundos. 
+- **¿Dónde se utiliza?**: `juego.iniciar()` se llama para iniciar el juego. A través del setInterval() cada 20 milisegundos se aplicará el efecto de gravedad a bird, se dibujará bird en su nueva posicion, y se verificará si hubo una colisión. A través del eventListener, se puede mover bird
 
 5. `terminar()`
 - **¿Qué hace?**: Limpia el timer guardado dentro de `game.timerId` (el que llama cada 20 milisegundos a `game.loop`). También, llama a `juego.mostrarGameOver()` y `juego.pararEfectos()`. 
@@ -47,35 +43,35 @@ En éste lab crearás 2 objetos: juego y bird. Estos objetos tendrán los métod
 
 6.  `mostrarGameover()`
 - **¿Qué hace?**:  Agrega el id "game-over" al elemento html con clase `.message`
-- **¿Dónde se utiliza?**: `juego.terminar()` llama a `juego.mostrarGameOver` para mostrar el mensaje "Game Over" cuando el juego termina.
+- **¿Dónde se utiliza?**: `juego.terminar()` llama a `juego.mostrarGameOver` para mostrar el mensaje "Game Over" cuando el juego termina
 
 7. `pararEfectos()`
 - **¿Qué hace?**: quita el id al elemento con clase `.ground`. También agrega el id "fall" al div con clase `.bird`
-- **¿Dónde se utiliza?**: `juego.terminar()` llama a `juego.pararEfectos()` para que bird deje de aleatear y el suelo deje de moverse. 
+- **¿Dónde se utiliza?**: `juego.terminar()` llama a `juego.pararEfectos()` para que bird deje de aleatear y el suelo deje de moverse 
 
 
 ## El objeto bird:
 
 ### Propiedades
 1. `div`
-- **¿Qué hace?**: 
-- **¿Dónde se utiliza?**: 
+- **¿Qué valor tiene?**: `bird.div` tiene el elemento html con clase `.bird`
+- **¿Dónde se utiliza?**: `bird.div` se utiliza dentro del método `bird.dibujar` de tal forma que se pueda dibujar el elemento en posiciones determinadas
 
 2. `bottom`
-- **¿Qué hace?**: 
-- **¿Dónde se utiliza?**: 
+- **¿Qué valor tiene?**: `bird.bottom` tiene un valor aleatorio entre `10` y `570`. Para calcular este valor aleatorio `bird.bottom` utiliza el método `juego.aleatorio()`
+- **¿Dónde se utiliza?**:  El valor de `bird.bottom` basicamente determina en donde se va a posicionar el elemento `bird`. Por lo tanto `bird.bottom` se utiliza en los metodos `bird.efectoGravedad()`, `bird.dibujar()`, `bird.mover()` y `bird.colision()`
 
 3. `left`
-- **¿Qué hace?**: 
-- **¿Dónde se utiliza?**: 
+- **¿Qué valor tiene?**: `bird.left` tiene el valor del numero `250`
+- **¿Dónde se utiliza?**: `bird.left` se utiliza dentro de `bird.dibujar()`. El valor de bird.left basicamente determinará el numero de pixeles a la izquierda del elemento con clas `.bird`
 
 4. `width`
-- **¿Qué hace?**: 
-- **¿Dónde se utiliza?**: 
+- **¿Qué valor tiene?**: `bird.width` tiene el valor del numero `60`
+- **¿Dónde se utiliza?**: El valor de de `bird.width` se utilizará más adelante para determinar si hubo una colision entre `bird` y los `obstaculos`
 
 5. `height`
-- **¿Qué hace?**: 
-- **¿Dónde se utiliza?**: 
+- **¿Qué valor tiene?**: `bird.height` tiene el valor del numero `45`
+- **¿Dónde se utiliza?**: El valor de de `bird.height` se utilizará más adelante para determinar si hubo una colision entre `bird` y los `obstaculos`
 
 ### Métodos:
 
