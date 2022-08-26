@@ -39,7 +39,7 @@ const juego = {
       let ground = document.querySelector(".ground");
       ground.removeAttribute("id");
   
-      bird.div.removeAttribute("id");
+    //   bird.div.removeAttribute("id");
       bird.div.setAttribute("id", "fall");
     },
   };
