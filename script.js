@@ -1,77 +1,60 @@
 const juego = {
-    timerId: 0,
-    gravedad: 2,
+    // 1. Agrega la propiedad timerId
+    
+    // 2. Agrega la propiedad gravedad
+    
   
+    // 3. Agrega el método aleatorio()
     aleatorio: function (min, max) {
-      return Math.floor(Math.random() * (max - min + 1) + min);
+      // Escribe codigo del método 
     },
   
-    verificaColision: function () {
-      if (bird.colision()) {
-        juego.terminar();
-      }
-    },
-  
+
+    // 12. Agrega el método loop()
     loop: function () {
-      bird.efectoGravedad();
-      bird.dibujar(); 
-      juego.verificaColision();
+     // Escribe codigo del método
     },
   
-    iniciar: function () {
-      document.addEventListener("keyup", bird.mover);
-      juego.timerId = setInterval(juego.loop, 20);
-    },
+    // 13. Agrega el método iniciar()
+    iniciar: function() {
+     // Escribe codigo del método
+    }
   
-    terminar: function () {  
-      clearInterval(juego.timerId);
-      juego.mostrarGameOver();
-      juego.pararEfectos();
-    },
-  
-    mostrarGameOver: function () {
-      const mensaje = document.querySelector(".message");
-      mensaje.setAttribute("id", "game-over");
-    },
-  
-    pararEfectos: function () {
-      let ground = document.querySelector(".ground");
-      ground.removeAttribute("id");
-  
-      bird.div.setAttribute("id", "fall");
-    },
   };
   
 
 
 
 const bird = {
-    div: document.querySelector(".bird"),
-    bottom: juego.aleatorio(10, 570),
-    left: 250,
-    width: 60,
-    height: 45,
+    // 4. Agrega la propiedad div
   
-    efectoGravedad: function () {
-      bird.bottom -= juego.gravedad;
-    },
-  
-    dibujar: function () {
-      bird.div.style.bottom = bird.bottom + "px";
-      bird.div.style.left = bird.left + "px";
-    },
-  
-    mover: function () {
-      bird.bottom += 40;
-    },
 
-    colision: function () {
-        if (bird.bottom < 0) {
-          return true;
-        }
-      },
-  
+    // 5. Agrega la propiedad bottom
    
-}
 
-juego.iniciar();
+    // 6. Agrega la propiedad left
+    left: 250,
+
+    // 7. Agrega la propiedad width
+    width: 60,
+
+    // 8. Agrega la propiedad height
+    
+  
+    // 9. Agrega el método efectoGravedad()
+    efectoGravedad: function () {
+      // Agrega codigo del método
+    },
+  
+    // 10. Agrega el método dibujar()
+    dibujar: function () {
+      //Agrega codigo del método
+    },
+
+    // 11. Agrega el método mover()
+
+}
+   
+
+// llama a juego.iniciar()
+juego.iniciar()

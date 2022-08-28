@@ -2,10 +2,28 @@
 
 ## Introducción
 
-En los labs anteriores agregaste el HTML y CSS del juego flappy bird. En éste lab comenzarás a agregar la lógica y funcionalidad del juego. 
+En los labs anteriores agregaste el HTML y CSS del juego flappy bird. En éste lab comenzarás a agregar la lógica y funcionalidad del juego.  
 
 ## Instrucciones
-Crea 2 objetos: juego y bird. Estos objetos deben tener los métodos y propiedades que se describen a continuación.
+
+Dentro de `script.js` verás que se encuentran dos objetos: `juego` y `bird`. 
+
+Agrega los siguientes métodos y propiedades a `bird` y `juego`. Las descripciones para los métodos y propiedades del objeto bird y juego se encuentran más abajo en este README.
+
+1. Agrega la propiedad `juego.timerId`
+2. Agrega la propiedad `juego.gravedad`
+3. Agrega el método `juego.aleatorio`
+4. Agrega la propiedad `bird.div`
+5. Agrega la propiedad `bird.bottom`
+6. Agrega la propiedad `bird.left`
+7. Agrega la propiedad `bird.width`
+8. Agrega la propiedad `bird.height`
+9. Agrega el método `bird.efectoGravedad`
+10. Agrega el método `bird.dibujar`
+11. Agrega el método `bird.mover`
+12. Agrega el método `juego.loop`
+13. Agrega el método `juego.iniciar`
+
 
 ## El objeto juego
 
@@ -25,32 +43,15 @@ Crea 2 objetos: juego y bird. Estos objetos deben tener los métodos y propiedad
 - **¿Dónde se utiliza?**: `bird.bottom` llamará a `juego.aleatorio()` para calcular un numero aleatorio entre `10` y `570`
 
 
-2. `verificaColision()`
-- **¿Qué hace?**: Llama a `bird.colision()` para revisar si `bird` tuvo una colision. Si `bird.colision()` devuelve el valor `true`, llama a `juego.terminar()` para terminar el juego.
-- **¿Dónde se utiliza?**:  `juego.loop()` llamará a `juego.verificaColision()` para revisar constantemente si hubo una colisión.  
-
-
-3. `loop()`
+2. `loop()`
 - **¿Qué hace?** :Llama a `bird.efectoGravedad()`, `bird.dibujar()` y `juego.verificaColision()`
 - **¿Dónde se utiliza?**: `juego.iniciar()` inicia un `setInterval()` que llama a `juego.loop()` cada 20 milisegundos. De ésta manera cada 20 milisegundos se aplicará el efecto de gravedad a bird, se dibujará bird en su nueva posicion, y se verificará si hubo una colisión
 
 
-4. `iniciar()`
+3. `iniciar()`
 - **¿Qué hace?** : Agrega un eventListener de tal forma que cada que se pulse una tecla, se llame a `bird.move`. También asigna a `juego.timerId` un `setInterval()` que llame a `juego.loop()` cada 20 milisegundos. 
 - **¿Dónde se utiliza?**: `juego.iniciar()` se tiene que llamar para iniciar el juego. A través del `setInterval()` cada 20 milisegundos se aplicará el efecto de gravedad a `bird`, se dibujará `bird` en su nueva posicion, y se verificará si hubo una colisión. A través del eventListener, se puede mover `bird`
 
-5. `terminar()`
-- **¿Qué hace?**: Limpia el timer guardado dentro de `game.timerId` (el que llama cada 20 milisegundos a `game.loop`). También, llama a `juego.mostrarGameOver()` y `juego.pararEfectos()`. 
-- **¿Dónde se utiliza?**: El metodo `juego.terminar()` se llama cuando hay una colision
-
-
-6.  `mostrarGameover()`
-- **¿Qué hace?**:  Agrega el id "game-over" al elemento html con clase `.message`
-- **¿Dónde se utiliza?**: `juego.terminar()` llama a `juego.mostrarGameOver` para mostrar el mensaje "Game Over" cuando el juego termina
-
-7. `pararEfectos()`
-- **¿Qué hace?**: quita el id al elemento con clase `.ground`. También agrega el id "fall" al div con clase `.bird`
-- **¿Dónde se utiliza?**: `juego.terminar()` llama a `juego.pararEfectos()` para que bird deje de aleatear y el suelo deje de moverse 
 
 
 ## El objeto bird:
@@ -90,7 +91,5 @@ Crea 2 objetos: juego y bird. Estos objetos deben tener los métodos y propiedad
 - **¿Qué hace?**: `bird.mover()` agrega `40` a `bird.bottom`
 - **¿Dónde se utiliza?**: `juego.iniciar()` agrega un eventListener de tal forma que cuando se pulse una tecla, se llame a `bird.mover()`
 
-4. `colision()`
-- **¿Qué hace?**: `bird.colision()` revisa si `bird.bottom` es menor a `0`. Si eseto es verdad, devuelve el valor `true`
-- **¿Dónde se utiliza?**: `juego.verificaColision()` llama a `bird.colision()` para verificar si hubo una colision.
+
 
