@@ -1,60 +1,77 @@
 const juego = {
-    // 1. Agrega la propiedad timerId
-    
-    // 2. Agrega la propiedad gravedad
-    
-  
-    // 3. Agrega el método aleatorio()
-    aleatorio: function (min, max) {
-      // Escribe codigo del método 
-    },
-  
+  timerId: 0,
+  gravedad: 2,
 
-    // 12. Agrega el método loop()
-    loop: function () {
-     // Escribe codigo del método
-    },
-  
-    // 13. Agrega el método iniciar()
-    iniciar: function() {
-     // Escribe codigo del método
-    }
-  
-  };
-  
+  aleatorio: function (min, max) {
+    return Math.floor(Math.random() * (max - min + 1) + min);
+  },
+
+  // verificaColision: function () {
+  //   if (bird.colision()) {
+  //     juego.terminar();
+  //   }
+  // },
+
+  loop: function () {
+    bird.efectoGravedad();
+    bird.dibujar(); 
+    // juego.verificaColision();
+  },
+
+  iniciar: function () {
+    document.addEventListener("keyup", bird.mover);
+    juego.timerId = setInterval(juego.loop, 20);
+  },
+
+  // terminar: function () {  
+  //   clearInterval(juego.timerId);
+  //   juego.mostrarGameOver();
+  //   juego.pararEfectos();
+  // },
+
+  // mostrarGameOver: function () {
+  //   const mensaje = document.querySelector(".message");
+  //   mensaje.setAttribute("id", "game-over");
+  // },
+
+  // pararEfectos: function () {
+  //   let ground = document.querySelector(".ground");
+  //   ground.removeAttribute("id");
+
+  //   bird.div.setAttribute("id", "fall");
+  // },
+};
+
 
 
 
 const bird = {
-    // 4. Agrega la propiedad div
-  
+  div: document.querySelector(".bird"),
+  bottom: juego.aleatorio(10, 570),
+  left: 250,
+  width: 60,
+  height: 45,
 
-    // 5. Agrega la propiedad bottom
-   
+  efectoGravedad: function () {
+    bird.bottom -= juego.gravedad;
+  },
 
-    // 6. Agrega la propiedad left
-    left: 250,
+  dibujar: function () {
+    bird.div.style.bottom = bird.bottom + "px";
+    bird.div.style.left = bird.left + "px";
+  },
 
-    // 7. Agrega la propiedad width
-    width: 60,
+  mover: function () {
+    bird.bottom += 40;
+  },
 
-    // 8. Agrega la propiedad height
-    
-  
-    // 9. Agrega el método efectoGravedad()
-    efectoGravedad: function () {
-      // Agrega codigo del método
-    },
-  
-    // 10. Agrega el método dibujar()
-    dibujar: function () {
-      //Agrega codigo del método
-    },
+  // colision: function () {
+  //     if (bird.bottom < 0) {
+  //       return true;
+  //     }
+  //   },
 
-    // 11. Agrega el método mover()
-
+ 
 }
-   
 
-// llama a juego.iniciar()
-juego.iniciar()
+juego.iniciar();
